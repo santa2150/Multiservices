@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Lista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let elemento of elementos">
+      {{ elemento.nombre }}
+      <ion-button slot="end" (click)="editarElemento(elemento.id)">Editar</ion-button>
+      <ion-button slot="end" (click)="eliminarElemento(elemento.id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
